@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Api\Controllers;
 
 use App\Http\Requests\SpaRequest;
 use Illuminate\Http\Request;
