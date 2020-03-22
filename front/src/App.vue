@@ -36,6 +36,7 @@
           justify="center"
         >
           <v-col class="text-center">
+              <login-form></login-form>
             <!-- <v-tooltip left>
               <template v-slot:activator="{ on }">
                 <v-btn
@@ -80,9 +81,10 @@
 
 <script>
 import NavBar from'./components/bar/NavBar.vue';
+import LoginForm from './components/login/LoginForm';
 
 export default {
-    components: {NavBar},
+    components: {NavBar, LoginForm},
     props: {
       source: String,
     },

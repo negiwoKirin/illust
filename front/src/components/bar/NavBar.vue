@@ -19,23 +19,23 @@
 
 
 
-    <v-btn icon>
+    <!-- <v-btn icon>
         <search id="clickaway" v-on-clickaway="searchFalse" v-show="search_box" @click="searchFalse()"></search>
         <v-icon @click="clickSearch()">mdi-magnify</v-icon>
-    </v-btn>
+    </v-btn> -->
 
 
-      <!-- <v-menu
+      <v-menu
         left
         bottom
       >
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on">
             <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn> -->
-        <!-- </template> -->
+          </v-btn>
+        </template>
 
-        <!-- <v-list>
+        <v-list>
           <v-list-item
             v-for="n in 5"
             :key="n"
@@ -43,18 +43,18 @@
           >
             <v-list-item-title>Option {{ n }}</v-list-item-title>
           </v-list-item>
-        </v-list> -->
-      <!-- </v-menu> -->
+        </v-list>
+      </v-menu>
     </v-app-bar>
   </div>
 </template>
 
 <script>
-import Search from './search/Search.vue';
+// import Search from './search/Search.vue';
 import { mixin as clickaway } from 'vue-clickaway';
 
 export default {
-    components: {Search},
+    // components: {Search},
     mixins: [ clickaway ],
     data() {
         return {
