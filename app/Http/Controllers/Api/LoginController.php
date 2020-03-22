@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\LoginRequest;
+use App\Eloquents\User;
 
 class LoginController extends Controller
 {
@@ -14,8 +16,8 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return 'test';
-        //
+        $user = new User();
+        return $user->newQuery()->get();
     }
 
     /**
@@ -25,7 +27,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        //
+        return 'create';
     }
 
     /**
@@ -34,9 +36,13 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LoginRequest $request)
     {
-        //
+        $user = new User();
+        $user->newQuery()->create([
+            'login_id' => $request->login_id,
+            'password' => encrypt($request->password)
+        ]);
     }
 
     /**
